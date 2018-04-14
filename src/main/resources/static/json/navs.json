@@ -1,0 +1,41 @@
+[{
+	"title" : "后台首页",
+	"icon" : "icon-computer",
+	"href" : "page/main",
+	"spread" : false
+},{
+	"title" : "短链接列表",
+	"icon" : "icon-text",
+	"href" : "page/news/newsList",
+	"spread" : false
+},{
+	"title" : "友情链接",
+	"icon" : "&#xe64c;",
+	"href" : "page/links/linksList",
+	"spread" : false
+},{
+	"title" : "系统基本参数",
+	"icon" : "&#xe631;",
+	"href" : "page/systemParameter/systemParameter",
+	"spread" : false
+},{
+	"title" : "其他页面",
+	"icon" : "&#xe630;",
+	"href" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"title" : "404页面",
+			"icon" : "&#xe61c;",
+			"href" : "page/404",
+			"spread" : false
+		},
+		{
+			"title" : "登录",
+			"icon" : "&#xe609;",
+			"href" : "page/login/login",
+			"spread" : false,
+			"target" : "_blank"
+		}
+	]
+}]

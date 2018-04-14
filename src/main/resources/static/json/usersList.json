@@ -1,0 +1,25 @@
+[{
+    "id" : "1",
+    "userName" : "贤心",
+    "userEmail" : "xianxin@layui.com",
+    "userSex" : "男",
+    "userStatus" : "正常使用",
+    "userGrade" : "高级会员",
+    "crtTime" : "2017-05-14 15:35"
+},{
+    "id" : "2",
+    "userName" : "纸飞机",
+    "userEmail" : "fly@layui.com",
+    "userSex" : "男",
+    "userStatus" : "正常使用",
+    "userGrade" : "高级会员",
+    "crtTime" : "2017-05-14 16:25"
+},{
+    "id" : "3",
+    "userName" : "懿",
+    "userEmail" : "mage@layui.com",
+    "userSex" : "男",
+    "userStatus" : "正常使用",
+    "userGrade" : "超级会员",
+    "crtTime" : "2017-05-10 10:30"
+}]

@@ -1,0 +1,22 @@
+[{
+    "id" : "1",
+    "linksName" : "layui - 经典模块化前端框架",
+    "linksUrl" : "http://www.layui.com",
+    "masterEmail" : "xianxin@layui.com",
+    "crtTime" : "2017-05-14",
+    "showAddress" : "首页"
+},{
+    "id" : "2",
+    "linksName" : "layer官方演示与讲解",
+    "linksUrl" : "http://layer.layui.com",
+    "masterEmail" : "xianxin@layer.com",
+    "crtTime" : "2017-05-15",
+    "showAddress" : "子页"
+},{
+    "id" : "3",
+    "linksName" : "layui - 前端框架官方社区",
+    "linksUrl" : "http://fly.layui.com",
+    "masterEmail" : "xianxin@fly.com",
+    "crtTime" : "2017-05-12",
+    "showAddress" : "子页"
+}]
