@@ -155,11 +155,6 @@ layui.config({
 		}
 		form.render('checkbox');
 	})
- 
-	//操作
-	$("body").on("click",".links_edit",function(){  //编辑
-		layer.alert('您点击了友情链接编辑按钮，由于是纯静态页面，所以暂时不存在编辑内容，后期会添加，敬请谅解。。。',{icon:6, title:'友链编辑'});
-	})
 
 	$("body").on("click",".links_del",function(){  //删除
 		var _this = $(this);

@@ -117,7 +117,7 @@ layui.config({
 			var index = layui.layer.open({
 				title : "添加短链接",
 				type : 2,
-				content : "newsAdd.html",
+				content : "newsAdd",
 				success : function(layero, index){
 					setTimeout(function(){
 						layui.layer.tips('点击此处返回短链接列表', '.layui-layer-setwin .layui-layer-close', {

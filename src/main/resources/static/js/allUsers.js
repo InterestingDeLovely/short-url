@@ -154,11 +154,6 @@ layui.config({
 		form.render('checkbox');
 	})
 
-	//操作
-	$("body").on("click",".users_edit",function(){  //编辑
-		layer.alert('您点击了会员编辑按钮，由于是纯静态页面，所以暂时不存在编辑内容，后期会添加，敬请谅解。。。',{icon:6, title:'短链接编辑'});
-	})
-
 	$("body").on("click",".users_del",function(){  //删除
 		var _this = $(this);
 		layer.confirm('确定删除此用户？',{icon:3, title:'提示信息'},function(index){
