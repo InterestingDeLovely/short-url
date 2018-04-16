@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.redis.core.HashOperations;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.net.URLEncoder;
@@ -28,7 +29,14 @@ public class SinaShortUrlImpl implements SinaShortUrlService {
     @Value("${source}")
     private String source;
 
+    private StringRedisTemplate stringRedisTemplate;
     private HashOperations hashOperations;
+
+    @Autowired
+    public void setStringRedisTemplate(StringRedisTemplate stringRedisTemplate) {
+        this.stringRedisTemplate = stringRedisTemplate;
+        hashOperations = this.stringRedisTemplate.opsForHash();
+    }
 
     @Override
     public SinaShortUrl getShortUrl(String longUrl) {
