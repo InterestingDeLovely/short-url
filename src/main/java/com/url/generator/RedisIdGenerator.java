@@ -27,12 +27,12 @@ public class RedisIdGenerator implements IdGenerator{
      * 默认步长，为100
      */
     private  final Integer  STEP_SIZE = 1024;
-    private String idKey = "shortUrl";
+    private String idKey = "ShortUrl";
 
     /**
      * 储存自增主键的key值
      */
-    private static final String LOCAL_KEY= "me.eae.urls.idGenerator_key";
+    private static final String LOCAL_KEY= "com.url.idGenerator_key";
 
     /**
      * 系统初始化时起始值
