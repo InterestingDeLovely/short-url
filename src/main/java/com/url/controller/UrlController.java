@@ -1,5 +1,7 @@
 package com.url.controller;
 
+import com.url.exception.RunException;
+import com.url.modle.NewsList;
 import com.url.modle.Result;
 import com.url.modle.SinaShortUrl;
 import com.url.modle.Url;
@@ -46,9 +48,17 @@ public class UrlController {
 
     @PostMapping("/getSinaShortUrl")
     @ResponseBody
-    public Result getSinaShortUrl(String url){
+    public Result getSinaShortUrl(@RequestBody NewsList newsList){
 
-        SinaShortUrl shortUrl = sinaShortUrlService.getShortUrl(url);
+        SinaShortUrl shortUrl = null;
+        shortUrl = sinaShortUrlService.getShortUrl(newsList);
+//        try {
+//
+//        } catch (Exception e) {
+//            throw new RunException(500, "生成短链接失败", e);
+////            return Result.error(new RunException(500, "生成短链接失败", e));
+//        }
+
         return Result.OK(shortUrl.getUrls().get(0).getUrl_short());
     }
 

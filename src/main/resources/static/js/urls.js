@@ -1,15 +1,19 @@
 /**
  * Created by haojy on 2018/3/30.
  */
+//本地
 function getShortUrl() {
-    var str = $("#url").val();
-    console.log(str);
+    var newsList;
+    newsList = '{"longName":"'+$("#url").val()+'",';  //长连接
+    newsList += '"description":"'+$("#desc").val()+'"}'; //链接用途
     $.ajax({
         cache : true,
         type : "POST",
         url : "/getShortUrl",
-        data : {"url":str},
+        data : newsList,
         async : false,
+        dataType : "json",
+        contentType: "application/json",
         error : function() {
             alert("系统异常");
         },
@@ -23,15 +27,19 @@ function getShortUrl() {
 
 }
 
+/*新浪*/
 function getSinaShortUrl() {
-    var str = $("#sinaurl").val();
-    console.log(str);
+    var newsList;
+    newsList = '{"longName":"'+$("#sinaurl").val()+'",';  //长连接
+    newsList += '"description":"'+$("#sinadesc").val()+'"}'; //链接用途
     $.ajax({
         cache : true,
         type : "POST",
         url : "/getSinaShortUrl",
-        data : {"url":str},
+        data : newsList,
         async : false,
+        dataType : "json",
+        contentType: "application/json",
         error : function() {
             alert("系统异常");
         },

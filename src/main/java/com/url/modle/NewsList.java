@@ -18,7 +18,7 @@ public class NewsList {
     /**
      * 链接作用
      */
-    private String desc;
+    private String description;
     /**
      * 短链接生成者
      */
@@ -26,25 +26,25 @@ public class NewsList {
     /**
      * 审核结果
      */
-    private String shortStatus;
+    private String shortStatus = "审核通过";
     /**
      * 是否开放浏览
      */
-    private String shortLook;
+    private String shortLook = "开放浏览";
     /**
      * 是否浏览
      */
-    private String isShow;
+    private String isShow = "checked";
     /**
      * 创建时间
      */
-    private Date newsTime;
+    private Date newsTime = new Date();
 
-    public NewsList(int id, String shortName, String longName, String desc, String shortAuthor, String shortStatus, String shortLook, String isShow, Date newsTime) {
+    public NewsList(int id, String shortName, String longName, String description, String shortAuthor, String shortStatus, String shortLook, String isShow, Date newsTime) {
         this.id = id;
         this.shortName = shortName;
         this.longName = longName;
-        this.desc = desc;
+        this.description = description;
         this.shortAuthor = shortAuthor;
         this.shortStatus = shortStatus;
         this.shortLook = shortLook;
@@ -52,10 +52,10 @@ public class NewsList {
         this.newsTime = newsTime;
     }
 
-    public NewsList(String shortName, String longName, String desc, String shortAuthor, String shortStatus, String shortLook, String isShow, Date newsTime) {
+    public NewsList(String shortName, String longName, String description, String shortAuthor, String shortStatus, String shortLook, String isShow, Date newsTime) {
         this.shortName = shortName;
         this.longName = longName;
-        this.desc = desc;
+        this.description = description;
         this.shortAuthor = shortAuthor;
         this.shortStatus = shortStatus;
         this.shortLook = shortLook;
@@ -91,12 +91,12 @@ public class NewsList {
         this.longName = longName;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getShortAuthor() {
@@ -145,7 +145,7 @@ public class NewsList {
                 "id=" + id +
                 ", shortName='" + shortName + '\'' +
                 ", longName='" + longName + '\'' +
-                ", desc='" + desc + '\'' +
+                ", description='" + description + '\'' +
                 ", shortAuthor='" + shortAuthor + '\'' +
                 ", shortStatus='" + shortStatus + '\'' +
                 ", shortLook='" + shortLook + '\'' +

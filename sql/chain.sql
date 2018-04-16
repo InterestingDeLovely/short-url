@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : MySQL
+Source Server         : mysql
 Source Server Version : 50720
 Source Host           : localhost:3306
 Source Database       : short-url
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2018-04-14 15:13:48
+Date: 2018-04-16 16:14:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -61,18 +61,21 @@ CREATE TABLE `newslist` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `shortName` varchar(255) DEFAULT NULL COMMENT '短链接',
   `longName` varchar(255) DEFAULT NULL COMMENT '长连接链接',
-  `desc` varchar(255) DEFAULT NULL COMMENT '链接作用',
+  `description` varchar(255) DEFAULT NULL COMMENT '链接作用',
   `shortAuthor` varchar(255) DEFAULT NULL COMMENT '短链接生成者',
   `shortStatus` varchar(255) DEFAULT '审核通过' COMMENT '审核结果',
   `shortLook` varchar(255) DEFAULT '开放浏览' COMMENT '是否开放浏览',
   `isShow` varchar(255) DEFAULT 'checked' COMMENT '是否浏览',
   `newsTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='短链接表';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='短链接表';
 
 -- ----------------------------
 -- Records of newslist
 -- ----------------------------
+INSERT INTO `newslist` VALUES ('1', 'http://t.cn/Rp7YRQG', 'https://www.baidu.com', '链接测试，(#^.^#)', '懿', '审核通过', '开放浏览', 'checked', '2018-04-16 15:43:04');
+INSERT INTO `newslist` VALUES ('2', 'http://t.cn/Rp7YRQG', 'https://www.baidu.com', '测试', '懿', '审核通过', '开放浏览', 'checked', '2018-04-16 16:12:19');
+INSERT INTO `newslist` VALUES ('3', 'http://t.cn/RABDln7', 'https://www.bilibili.com/', '淅沥淅沥淅沥', null, '审核通过', '开放浏览', 'checked', '2018-04-16 16:13:30');
 
 -- ----------------------------
 -- Table structure for system
