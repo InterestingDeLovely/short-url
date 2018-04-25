@@ -1,6 +1,5 @@
 package com.url.controller;
 
-import com.url.exception.RunException;
 import com.url.modle.NewsList;
 import com.url.modle.Result;
 import com.url.modle.SinaShortUrl;
@@ -23,11 +22,6 @@ public class UrlController {
     UrlService urlService;
     @Autowired
     SinaShortUrlService sinaShortUrlService;
-
-    @GetMapping("/")
-    public String index() {
-        return "/index";
-    }
 
     @GetMapping("/{id}")
     public String redirect(@PathVariable("id") String id) {
